@@ -2,10 +2,6 @@ import "../styles.css";
 
 import type { ReactNode } from "react";
 import Header from "@/src/components/header/header";
-import CoinChart from "../components/components-returned-by-server-actions/coin-chart/coin-chart";
-import CoinChartHeader from "../components/components-returned-by-server-actions/coin-chart-header";
-import CoinSearchResults from "../components/components-returned-by-server-actions/coin-search-results";
-import CoinsList from "../components/components-returned-by-server-actions/coins-list";
 
 type RootLayoutProps = { children: ReactNode };
 
