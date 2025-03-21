@@ -7,7 +7,7 @@ import Chart from "./chart";
 export default function CoinChart({
   promise,
 }: {
-  promise: Promise<{ prices: [number, number][] }>;
+  promise?: Promise<{ prices: [number, number][] }>;
 }) {
   return (
     <SuspenseWithUse fallback={<Loader />} promise={promise}>

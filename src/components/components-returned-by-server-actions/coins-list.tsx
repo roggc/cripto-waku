@@ -42,7 +42,7 @@ export default function CoinsList({
   promise,
   initialPage,
 }: {
-  promise: Promise<Crypto[]>;
+  promise?: Promise<Crypto[]>;
   initialPage?: number;
 }) {
   const [, setCheck] = useState(0);

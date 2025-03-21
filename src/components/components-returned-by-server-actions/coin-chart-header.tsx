@@ -6,7 +6,7 @@ import SuspenseWithUse from "@/src/lib/suspense-with-use";
 export default function CoinChartHeader({
   promise,
 }: {
-  promise: Promise<{ name: string; image: { thumb: string } }>;
+  promise?: Promise<{ name: string; image: { thumb: string } }>;
 }) {
   return (
     <SuspenseWithUse fallback={<Loader />} promise={promise}>

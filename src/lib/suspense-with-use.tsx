@@ -1,11 +1,14 @@
 import { ReactNode, Suspense, use } from "react";
 
 type UseProps<T> = {
-  promise: Promise<T>;
+  promise?: Promise<T> | undefined;
   children: (data: T) => ReactNode;
 };
 
 const Use = <T,>({ promise, children }: UseProps<T>) => {
+  if (!promise) {
+    return null;
+  }
   const data = use(promise);
   return children(data);
 };
@@ -20,7 +23,7 @@ const SuspenseWithUse = <T,>({
   children,
 }: SuspenseWithUseProps<T>) => (
   <Suspense fallback={fallback}>
-    <Use promise={promise}>{children}</Use>
+    {promise ? <Use promise={promise}>{children}</Use> : null}
   </Suspense>
 );
 

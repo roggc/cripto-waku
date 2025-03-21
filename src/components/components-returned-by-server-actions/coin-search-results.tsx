@@ -9,7 +9,7 @@ import SkeletonCard from "@/src/components/ui/skeleton-card";
 export default function CoinSearchResults({
   promise,
 }: {
-  promise: Promise<SearchResult>;
+  promise?: Promise<SearchResult>;
 }) {
   return (
     <SuspenseWithUse
