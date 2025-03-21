@@ -1,0 +1,41 @@
+{
+  "name": "kendoreact-challenge",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "waku dev",
+    "build": "waku build",
+    "start": "waku start"
+  },
+  "dependencies": {
+    "@progress/kendo-drawing": "^1.21.2",
+    "@progress/kendo-licensing": "^1.5.1",
+    "@progress/kendo-popup-common": "^1.9.2",
+    "@progress/kendo-react-animation": "^10.0.0",
+    "@progress/kendo-react-buttons": "^10.0.0",
+    "@progress/kendo-react-common": "^10.0.0",
+    "@progress/kendo-react-indicators": "^10.0.0",
+    "@progress/kendo-react-inputs": "^10.0.0",
+    "@progress/kendo-react-intl": "^10.0.0",
+    "@progress/kendo-react-layout": "^10.0.0",
+    "@progress/kendo-react-popup": "^10.0.0",
+    "@progress/kendo-react-progressbars": "^10.0.0",
+    "@progress/kendo-svg-icons": "^4.0.0",
+    "@progress/kendo-theme-default": "^10.3.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-server-dom-webpack": "19.0.0",
+    "recharts": "^2.15.1",
+    "waku": "0.21.23"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.0.12",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
+    "postcss": "8.5.3",
+    "tailwindcss": "4.0.12",
+    "typescript": "5.8.2",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
