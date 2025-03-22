@@ -2,10 +2,7 @@ import "../styles.css";
 
 import type { ReactNode } from "react";
 import Header from "@/src/components/header/header";
-import CoinChart from "@/src/components/components-returned-by-server-actions/coin-chart/coin-chart";
-import CoinChartHeader from "@/src/components/components-returned-by-server-actions/coin-chart-header";
-import CoinSearchResults from "@/src/components/components-returned-by-server-actions/coin-search-results";
-import CoinsList from "@/src/components/components-returned-by-server-actions/coins-list";
+import UseClientComponentsReturnedByServerActions from "@/src/components/use-client-components-returned-by-server-actions";
 
 type RootLayoutProps = { children: ReactNode };
 
@@ -19,14 +16,8 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       <link rel="icon" type="image/png" href={data.icon} />
       <Header />
       <main className="flex-1 min-h-0 pb-4">{children}</main>
-      {false && (
-        <>
-          <CoinChart />
-          <CoinChartHeader />
-          <CoinSearchResults />
-          <CoinsList />
-        </>
-      )}
+      {/* this is necessary for the project to build/deploy correctly. if we do not do this the project fails on deploy/build while working in local dev */}
+      <UseClientComponentsReturnedByServerActions />
     </div>
   );
 }
