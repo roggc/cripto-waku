@@ -17,7 +17,7 @@ import SkeletonCard from "@/src/components/ui/skeleton-card";
 import type { Crypto } from "@/src/types/crypto";
 import CoinCard from "@/src/components/ui/coin-card";
 
-const LoadMore = ({
+const LoadMoreMark = ({
   ref,
   setCheck,
 }: {
@@ -72,7 +72,7 @@ export default function CoinsList({
             {coinsList(page.toString())}
           </Suspense>
         ) : (
-          <LoadMore
+          <LoadMoreMark
             key={`target-component___`}
             ref={target}
             setCheck={setCheck}
